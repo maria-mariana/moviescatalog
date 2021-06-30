@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="header">
+
+        <div class="header_banner" [ngStyle]="{
+        'background-image' : 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url('+headerBGUrl+')'
+        }">
+            <h2>{{trending?.results[15].title}}</h2>
+            <div class="header_buttons">
+
+                <button class="play-button">
+            <mat-icon>arrow_right</mat-icon>
+            <span>Play</span>
+          </button>
+
+                <button class="more-button">
+            <mat-icon>info</mat-icon>
+            <span>More Info</span>
+          </button>
+                <div class="name-autoplay">
+                    <span>Autoplay</span>
+                    <input id="switch-flat" class="switch switch--flat" type="checkbox">
+                    <label for="switch-flat"></label>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="header_main" id="stickyHeader" [class.sticky]="sticky" #stickHeader>
+            <div class="header_left ">
+                <a routerLink="/ ">
+                    <img src="./assets/imagem/logonetflix.png " alt="logo ">
+                </a>
+                <ul>
+                    <li class="active ">
+                        <a href="#home "> HOME</a></li>
+                    <li>
+                        <a href="#tvshows ">TV SHOWS</a></li>
+                    <li>
+                        <a href="#movies ">MOVIES</a></li>
+                    <li>
+                        <a href="#newepopular ">NEW E POPULAR</a></li>
+                </ul>
+            </div>
+
+            <div class="header_right ">
+                <ul>
+                    <li class="active ">
+                        <a href="#iconpesquisar ">
+                            <mat-icon>search</mat-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#mylist ">
+                            <mat-icon>favorite</mat-icon>
+
+
+                        </a>
+                    </li>
+                    <li>
+                        <a hred="#mylist">
+                            <h4>MY LYST</h4>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#sino ">
+                            <mat-icon>notifications</mat-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <img class="avatar " src="./assets/imagem/avatar.jpg " alt="avatar ">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--HEADER MAIN ENDS HERE-->
+
+    </div>
+
+    <div class="body" style="margin-top: 30rem;">
+        <app-move title="Trending" [movies]="trending" [moveConfig]="moveConfig"></app-move>
+        <app-move title="Top Rated" [movies]="topRated" [moveConfig]="moveConfig"></app-move>
+        <app-move title="Now Playing" [movies]="nowPlaying" [moveConfig]="moveConfig"></app-move>
+        <app-move title="Originals" [movies]="originals" [moveConfig]="moveConfig"></app-move>
+        <app-move title="Popular" [movies]="popular" [moveConfig]="moveConfig"></app-move>
+    </div>
+
+
+
+</div>
