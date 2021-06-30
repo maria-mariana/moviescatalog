@@ -29,7 +29,7 @@
         </div>
 
         <div class="header_main" id="stickyHeader" [class.sticky]="sticky" #stickHeader>
-            <div class="header_left ">
+            <div class="header_left " name="viewport">
                 <a routerLink="/ ">
                     <img src="./assets/imagem/logonetflix.png " alt="logo ">
                 </a>
@@ -72,7 +72,9 @@
                         </a>
                     </li>
                     <li>
-                        <img class="avatar " src="./assets/imagem/avatar.jpg " alt="avatar ">
+                        <a href="#perfil">
+                            <img class="avatar " src="./assets/imagem/avatar.jpg " alt="avatar ">
+                        </a>
                     </li>
                 </ul>
             </div>
